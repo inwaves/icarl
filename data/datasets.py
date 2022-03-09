@@ -41,7 +41,11 @@ class SyntheticDataset(Dataset):
         return self.data_dim, self.aux_dim, self.latent_dim
 
 
-class DspritesDataset(Dataset):
+class DSpritesDataset(Dataset):
+    """
+    Class wrapper around the dSprites dataset.
+    Utils are from the Deepmind dSprites repo: https://github.com/deepmind/dsprites-dataset
+    """
 
     def __getitem__(self, index):
         return self.imgs[index], self.shape_latent[index]
